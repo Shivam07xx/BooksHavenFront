@@ -1,0 +1,338 @@
+.books-page {
+  min-height: 100vh;
+  padding: var(--space-2xl) 0;
+  background: linear-gradient(135deg, var(--neutral-50) 0%, var(--primary-50) 100%);
+}
+
+.books-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: var(--space-2xl);
+  padding-bottom: var(--space-xl);
+  border-bottom: 2px solid var(--neutral-200);
+}
+
+.books-title-section {
+  flex: 1;
+}
+
+.books-title {
+  font-size: var(--font-size-4xl);
+  font-weight: 700;
+  color: var(--neutral-900);
+  margin-bottom: var(--space-md);
+}
+
+.books-subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--neutral-600);
+  max-width: 500px;
+}
+
+.books-stats {
+  text-align: right;
+}
+
+.books-count {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--primary-600);
+  background: white;
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--primary-200);
+}
+
+.books-controls {
+  display: flex;
+  gap: var(--space-lg);
+  align-items: center;
+  margin-bottom: var(--space-2xl);
+  flex-wrap: wrap;
+}
+
+.search-bar {
+  flex: 1;
+  min-width: 300px;
+}
+
+.search-input-container {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  left: var(--space-md);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--neutral-400);
+}
+
+.search-input {
+  width: 100%;
+  padding: var(--space-md) var(--space-md) var(--space-md) 3rem;
+  border: 2px solid var(--neutral-200);
+  border-radius: var(--radius-xl);
+  font-size: var(--font-size-base);
+  background: white;
+  transition: all var(--transition-base);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary-500);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.filter-controls {
+  display: flex;
+  gap: var(--space-md);
+  align-items: center;
+}
+
+.filter-toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-lg);
+  background: white;
+  border: 2px solid var(--neutral-200);
+  border-radius: var(--radius-lg);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.filter-toggle:hover {
+  border-color: var(--primary-400);
+  background: var(--primary-50);
+}
+
+.filter-toggle.active {
+  background: var(--primary-600);
+  color: white;
+  border-color: var(--primary-600);
+}
+
+.sort-control {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  background: white;
+  padding: var(--space-md);
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--neutral-200);
+}
+
+.sort-select {
+  border: none;
+  background: none;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+}
+
+.sort-select:focus {
+  outline: none;
+}
+
+.filters-panel {
+  background: white;
+  border: 2px solid var(--neutral-200);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  margin-bottom: var(--space-2xl);
+  box-shadow: var(--shadow-md);
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.filters-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-xl);
+  align-items: end;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.filter-label {
+  font-weight: 600;
+  color: var(--neutral-700);
+  font-size: var(--font-size-sm);
+}
+
+.filter-select {
+  padding: var(--space-md);
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--radius-lg);
+  background: white;
+  font-size: var(--font-size-base);
+}
+
+.price-inputs {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.price-input {
+  flex: 1;
+  padding: var(--space-md);
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-base);
+}
+
+.price-separator {
+  color: var(--neutral-500);
+  font-weight: 500;
+}
+
+.clear-filters-btn {
+  padding: var(--space-md) var(--space-lg);
+  background: var(--neutral-100);
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--radius-lg);
+  color: var(--neutral-700);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  height: fit-content;
+}
+
+.clear-filters-btn:hover {
+  background: var(--neutral-200);
+  border-color: var(--neutral-400);
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-xl);
+}
+
+.no-books {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  padding: var(--space-3xl);
+}
+
+.no-books-content {
+  text-align: center;
+  max-width: 400px;
+}
+
+.no-books-icon {
+  color: var(--neutral-400);
+  margin-bottom: var(--space-lg);
+}
+
+.no-books-content h3 {
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  color: var(--neutral-700);
+  margin-bottom: var(--space-md);
+}
+
+.no-books-content p {
+  color: var(--neutral-500);
+  margin-bottom: var(--space-xl);
+  line-height: 1.6;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  gap: var(--space-lg);
+}
+
+.loading-container p {
+  font-size: var(--font-size-lg);
+  color: var(--neutral-600);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .books-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-lg);
+  }
+
+  .books-title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .books-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-bar {
+    min-width: unset;
+  }
+
+  .filter-controls {
+    justify-content: space-between;
+  }
+
+  .filters-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .books-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+}
+
+@media (max-width: 480px) {
+  .books-page {
+    padding: var(--space-lg) 0;
+  }
+
+  .books-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .books-subtitle {
+    font-size: var(--font-size-base);
+  }
+
+  .search-input {
+    padding: var(--space-sm) var(--space-sm) var(--space-sm) 2.5rem;
+  }
+
+  .filter-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-sm);
+  }
+
+  .filters-panel {
+    padding: var(--space-lg);
+  }
+}
