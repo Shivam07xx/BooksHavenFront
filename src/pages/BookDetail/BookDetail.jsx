@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { Star, ShoppingCart, Heart, ArrowLeft, AlertCircle } from 'lucide-react';
+import { AlertCircle, ArrowLeft, Heart, ShoppingCart, Star } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useApp } from '../../context/AppContext';
 import './BookDetail.css';
 
@@ -190,7 +190,7 @@ const BookDetail = () => {
             </div>
 
             <div className="book-price-section">
-              <span className="book-detail-price">${book.price}</span>
+              <span className="book-detail-price">₹{book.price}</span>
               <span className="stock-info">
                 {book.stock > 0 ? `${book.stock} in stock` : 'Out of stock'}
               </span>

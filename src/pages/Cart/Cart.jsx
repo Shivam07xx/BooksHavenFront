@@ -1,6 +1,5 @@
-import React from 'react';
+import { ArrowLeft, ArrowRight, Minus, Plus, ShoppingCart, Trash2 } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
-import { ShoppingCart, Plus, Minus, Trash2, ArrowRight, ArrowLeft } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 import './Cart.css';
 
@@ -74,7 +73,7 @@ const Cart = () => {
                     <h3 className="item-title">{item.title}</h3>
                     <p className="item-author">by {item.author}</p>
                     <span className="item-genre">{item.genre}</span>
-                    <div className="item-price">${item.price}</div>
+                    <div className="item-price">₹{item.price}</div>
                   </div>
 
                   <div className="item-actions">
@@ -104,7 +103,7 @@ const Cart = () => {
                     </button>
                     
                     <div className="item-total">
-                      ${(item.price * item.quantity).toFixed(2)}
+                      ₹{(item.price * item.quantity).toFixed(2)}
                     </div>
                   </div>
                 </div>
@@ -117,7 +116,7 @@ const Cart = () => {
             
             <div className="summary-row">
               <span className="summary-label">Subtotal ({totalItems} items)</span>
-              <span className="summary-value">${subtotal.toFixed(2)}</span>
+              <span className="summary-value">₹{subtotal.toFixed(2)}</span>
             </div>
             
             <div className="summary-row">
@@ -129,12 +128,12 @@ const Cart = () => {
             
             <div className="summary-row">
               <span className="summary-label">Tax</span>
-              <span className="summary-value">${tax.toFixed(2)}</span>
+              <span className="summary-value">₹{tax.toFixed(2)}</span>
             </div>
             
             <div className="summary-row">
               <span className="total-label">Total</span>
-              <span className="total-value">${total.toFixed(2)}</span>
+              <span className="total-value">₹{total.toFixed(2)}</span>
             </div>
 
             <button 

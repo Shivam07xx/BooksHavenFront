@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { Edit, Heart, Save, ShoppingBag, ShoppingCart, Trash2, User, X } from 'lucide-react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { User, ShoppingBag, Heart, Edit, Save, X, ShoppingCart, Trash2 } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 import './Profile.css';
 
@@ -245,7 +245,7 @@ const Profile = () => {
                     </div>
 
                     <div className="order-total">
-                      Total: ${order.totalAmount.toFixed(2)}
+                      Total: ₹{order.totalAmount.toFixed(2)}
                     </div>
                   </div>
                 ))}
@@ -286,7 +286,7 @@ const Profile = () => {
                   />
                   <div className="wishlist-title">{book.title}</div>
                   <div className="wishlist-author">by {book.author}</div>
-                  <div className="wishlist-price">${book.price}</div>
+                  <div className="wishlist-price">₹{book.price}</div>
                   
                   <div className="wishlist-actions">
                     <button 

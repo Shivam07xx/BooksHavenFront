@@ -1,6 +1,5 @@
-import React from 'react';
+import { Heart, ShoppingCart, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { Star, ShoppingCart, Heart } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 import './BookCard.css';
 
@@ -111,7 +110,7 @@ const BookCard = ({ book }) => {
 
           <div className="book-footer">
             <div className="book-price">
-              <span className="price">${book.price}</span>
+              <span className="price">₹{book.price}</span>
             </div>
             
             <button 

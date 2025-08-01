@@ -1,8 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { ArrowRight, Award, BookOpen, Star, Truck, Users } from 'lucide-react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Star, BookOpen, Users, Award, Truck } from 'lucide-react';
-import { useApp } from '../../context/AppContext';
 import BookCard from '../../components/BookCard/BookCard';
+import { useApp } from '../../context/AppContext';
 import './Home.css';
 
 const Home = () => {
@@ -127,7 +127,7 @@ const Home = () => {
     {
       icon: <Truck size={32} />,
       title: "Fast Delivery",
-      description: "Free shipping on orders over $50 with quick delivery"
+      description: "Free shipping on orders over ₹50 with quick delivery"
     },
     {
       icon: <Award size={32} />,

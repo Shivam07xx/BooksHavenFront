@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Shield, BookOpen, ShoppingBag, Users, DollarSign, Plus, Edit, Trash2, X } from 'lucide-react';
+import { BookOpen, DollarSign, Edit, Plus, Shield, ShoppingBag, Trash2, Users, X } from 'lucide-react';
+import { useEffect, useState } from 'react';
 import { useApp } from '../../context/AppContext';
 import './Admin.css';
 
@@ -234,7 +234,7 @@ const Admin = () => {
             <div className="stat-icon">
               <DollarSign size={24} />
             </div>
-            <div className="stat-value">${(stats.totalRevenue || 0).toFixed(0)}</div>
+            <div className="stat-value">₹{(stats.totalRevenue || 0).toFixed(0)}</div>
             <div className="stat-label">Total Revenue</div>
           </div>
         </div>
@@ -285,7 +285,7 @@ const Admin = () => {
                         <div className="book-author-small">by {book.author}</div>
                       </td>
                       <td>{book.genre}</td>
-                      <td>${book.price}</td>
+                      <td>₹{book.price}</td>
                       <td>
                         <span className={`stock-badge ${getStockBadgeClass(book.stock)}`}>
                           {book.stock}

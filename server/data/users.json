@@ -8,5 +8,15 @@
     "createdAt": "2025-07-31T20:08:01.461Z",
     "orders": [],
     "wishlist": []
+  },
+  {
+    "id": "1753992481462",
+    "name": "Shivam Roy",
+    "email": "shivam@admin.com",
+    "password": "$2b$10$o14zTgErLQ.i2Aej1jcrbOORpU6Pu4YEI6PDbeReutpsxDYarCjoy",
+    "role": "admin",
+    "createdAt": "2025-07-31T20:08:01.461Z",
+    "orders": [],
+    "wishlist": []
   }
 ]

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { ArrowRight, CheckCircle, CreditCard, Home, MapPin, User } from 'lucide-react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { CreditCard, MapPin, User, CheckCircle, ArrowRight, Home } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 import './Checkout.css';
 
@@ -149,7 +149,7 @@ const Checkout = () => {
               </div>
               <div className="order-detail-row">
                 <span>Total:</span>
-                <span>${orderDetails?.total.toFixed(2)}</span>
+                <span>₹{orderDetails?.total.toFixed(2)}</span>
               </div>
               <div className="order-detail-row">
                 <span>Estimated Delivery:</span>
@@ -413,7 +413,7 @@ const Checkout = () => {
                     <div className="item-quantity">Qty: {item.quantity}</div>
                   </div>
                   <div className="item-price-small">
-                    ${(item.price * item.quantity).toFixed(2)}
+                    ₹{(item.price * item.quantity).toFixed(2)}
                   </div>
                 </div>
               ))}
@@ -421,7 +421,7 @@ const Checkout = () => {
             
             <div className="summary-row">
               <span className="summary-label">Subtotal ({totalItems} items)</span>
-              <span className="summary-value">${subtotal.toFixed(2)}</span>
+              <span className="summary-value">₹{subtotal.toFixed(2)}</span>
             </div>
             
             <div className="summary-row">
@@ -433,12 +433,12 @@ const Checkout = () => {
             
             <div className="summary-row">
               <span className="summary-label">Tax</span>
-              <span className="summary-value">${tax.toFixed(2)}</span>
+              <span className="summary-value">₹{tax.toFixed(2)}</span>
             </div>
             
             <div className="summary-row">
               <span className="total-label">Total</span>
-              <span className="total-value">${total.toFixed(2)}</span>
+              <span className="total-value">₹{total.toFixed(2)}</span>
             </div>
           </div>
         </div>
